@@ -13,8 +13,9 @@ void dfs(int u, int p = -1) {
 	
 		if (entrada[v]) low[u] = min(low[u], entrada[v]);
 		else {
-      dfs(v, u);
+      		dfs(v, u);
 			low[u] = min(low[u], low[v]);
+			
 			if (entrada[u] < low[v]) //ponte
 		}
 	}
