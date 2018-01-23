@@ -95,3 +95,11 @@ Point incenter(Point A, Point B, Point C) {
 
 	return Point(x, y);
 }
+
+/* Dispositivo delta */
+double area(vector <Point> v) {
+	double area = 0.0;
+	for (int i = 0; i < (int)v.size(); i++) 
+		area += v[i] ^ v[(i+1)%v.size()];
+	return abs(area/2.0);
+}
