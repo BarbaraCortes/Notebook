@@ -24,11 +24,11 @@ typedef struct Point {
 		return x*b.y - y*b.x;
 	}
 
-	double operator==(const Point b) const {
+	bool operator==(const Point b) const {
 		return ((x == b.x) && (y == b.y));
 	}
 	
-	double operator<(const Point b) const {
+	bool operator<(const Point b) const {
 		if (x != b.x) return x < b.x;
 		return y < b.y;
 	}
