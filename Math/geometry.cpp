@@ -100,6 +100,35 @@ Point incenter(Point A, Point B, Point C) {
 double area(vector <Point> v) {
 	double area = 0.0;
 	for (int i = 0; i < (int)v.size(); i++) 
-		area += v[i] ^ v[(i+1)%v.size()];
+		area += v[i] ^ v[(i+1) % v.size()];
 	return abs(area/2.0);
+}
+
+/* Sorts vectors counterclockwise */
+bool compare(Point& a, Point& b) {
+	return ((a-pivot)^(b-pivot)) > 0;
+}
+
+/* Monotonic chain */
+vector<Point> convex_hull(vector <Point> p) {
+	if (p.size() <= 2) return p;
+
+	int n = p.size(), k = 0;
+	vector<Point> H(2*n);
+
+	sort(p.begin(), p.end());
+
+	for (int i = 0; i < n; i++) {
+		while (k >= 2 and ((H[k-1]-H[k-2])^(p[i]-H[k-2])) <= 0.0) k--;
+		H[k++] = p[i];
+	}
+
+	for (int i = n-2, t = k+1; i >= 0; i--) {
+		while (k >= t and ((H[k-1]-H[k-2])^(p[i]-H[k-2])) <= 0.0) k--;
+		H[k++] = p[i];
+	}
+
+	H.resize(k-1);
+
+	return H;
 }
