@@ -1,2 +1,2 @@
-# gemataughtme
+# Notebook
 Competitive Programming Repository
