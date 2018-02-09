@@ -1,3 +1,5 @@
+/* Geometry template with double coordinates */
+
 typedef struct Point {
 	double x, y;
 	
@@ -32,6 +34,19 @@ typedef struct Point {
 		if (x != b.x) return x < b.x;
 		return y < b.y;
 	}
+
+	/* Another way to sort vectors counter-clockwise
+	bool hf() const {
+		if (y == 0) return (x > 0);
+		return (y > 0);
+	}
+	
+	bool operator<(const Point b) const {
+		bool h1 = hf();
+		bool h2 = b.hf();
+		if (h1 != h2) return (h1 < h2);
+		return (((*this)^b) > 0);
+	} */
 	
 	double len() {
 		return sqrt((*this) * (*this));

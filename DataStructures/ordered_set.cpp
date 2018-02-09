@@ -4,6 +4,7 @@
 
 using namespace __gnu_pbds;
 
+/* Data structure similar to a set, but allows you to get the k-th element in O(log n) */
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 
 int main() {

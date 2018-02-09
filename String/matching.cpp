@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
-
-using namespace std;
+/* String matching algorithms in O(n) */
 
 const int N = 1000007; //1e6
 

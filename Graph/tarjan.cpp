@@ -1,3 +1,4 @@
+/* Tarjans algorithm to find bridges in an undirected connected graph */
 int cnt;
 int low[N];
 int entrada[N];
@@ -16,7 +17,7 @@ void dfs(int u, int p = -1) {
       			dfs(v, u);
 			low[u] = min(low[u], low[v]);
 			
-			if (entrada[u] < low[v]) //ponte
+			if (entrada[u] < low[v]) //it's a bridge
 		}
 	}
 }

@@ -1,20 +1,4 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
-typedef long long ll;
-
-const int N = 257; //1e6
-const int inf = 0x3f3f3f3f; //1061109567 ~ 1e9
-
-#define fi first
-#define se second
-#define pb push_back
-#define mp make_pair
-#define mt make_tuple
-#define eb emplace_back
-#define all(x) (x).begin(), (x).end()
-
+/* Algorithm to determine maximum matching in a bipartite graph */
 int matu[N];
 int matv[N];
 int seen[N];

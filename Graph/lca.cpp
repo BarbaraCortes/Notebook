@@ -1,10 +1,4 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const int N = 100007; //1e5
-const int inf = 0x3f3f3f3f; //1061109567 ~ 1e9
-
+/* Algorithm to determine the least common ancestor of two vertices in a graph */
 int lev[N];
 int seen[N];
 int dp[N][44];

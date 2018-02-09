@@ -1,3 +1,4 @@
+/* Segment tree with lazy propagation which allows range updates and range queries */
 int v[N];
 int seg[4*N];
 int lazy[4*N];
