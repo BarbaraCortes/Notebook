@@ -1,2 +1,2 @@
 # Notebook
-Competitive Programming Repository
+A Competitive Programming Repository
